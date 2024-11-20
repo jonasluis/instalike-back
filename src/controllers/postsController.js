@@ -1,3 +1,5 @@
+import getTodosPosts from "../models/postsModel.js";
+
 export async function listarPosts(req, res){
     // Chama a função getTodosPosts para obter todos os posts do db.
     const posts = await getTodosPosts();
