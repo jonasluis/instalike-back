@@ -6,8 +6,8 @@ const conexao = await conectarAoBanco(process.env.STRING_CONEXAO)
 
 // Inicializa uma aplicação Express.js
 const app = express(); 
-//Permite que o servidor interprete as requisições com corpo JSON. Tranforma tudo que da em json
-app.use(express.json());
+
+
 // Inicia o servidor na porta 3000 e exibe uma mensagem no console quando o servidor estiver ouvindo.
 app.listen(3000, () => { 
     console.log("servidor escutando");
@@ -22,13 +22,7 @@ async function getTodosPosts() {
     // Retorna todos os documentos (posts) da coleção como um array.
     return colecao.find().toArray()
 }
-// Define uma rota GET para a URL "/posts".
-app.get("/posts", async (req, res) => {
-    // Chama a função getTodosPosts para obter todos os posts do db.
-    const posts = await getTodosPosts();
-    // Envia uma resposta HTTP com status 200 (OK) e os posts no formato JSON.
-    res.status(200).json(posts)//envia os objetos
-}) ;
+
 
 // function buscarPostPorID(id) {
 //     return posts.findIndex((post) => { //pega um post dentro dos posts
