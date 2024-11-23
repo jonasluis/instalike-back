@@ -1,0 +1,7 @@
+npm install express
+npm install mongodb
+npm install multer
+npm run dev
+npm i @google/generative-ai
+npm i cors
+npm install dotenv --save
